@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook K1-M06</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { width: 95%; margin: auto; }
+        .dropdown { margin-bottom: 20px; }
+        .time-title, .level-title { font-size: 1.2em; font-weight: bold; }
+        .activity { margin-bottom: 30px; }
+        .banner { background-color: #4CAF50; color: white; padding: 10px; cursor: pointer; }
+        .title { font-weight: bold; }
+        .subtitle { font-style: italic; }
+        .content { display: none; padding: 10px; border: 1px solid #ddd; }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 8px; border: 1px solid #ddd; vertical-align: top; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Playbook K1-M06</h1>
+        
+        <div class="dropdown">
+            <label for="class-time">Tiempo efectivo de Clase:</label>
+            <select id="class-time" onchange="updateContent()">
+                <option value="50">50 minutos</option>
+                <option value="40">40 minutos</option>
+                <option value="30">30 minutos</option>
+            </select>
+        </div>
+
+        <div class="dropdown">
+            <label for="class-level">Nivel:</label>
+            <select id="class-level" onchange="updateContent()">
+                <option value="K1">K1</option>
+                <option value="K2">K2</option>
+                <option value="K3">K3</option>
+            </select>
+        </div>
+        
+        <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+        <h2 id="selected-level" class="level-title">Nivel: K1</h2>
+        
+        <!-- Actividad 0 -->
+        <div id="activity-0" class="activity">
+            <div class="banner" onclick="toggleContent('revision_materiales')">
+                <div class="title">📚 Actividad 0: Revisión de Materiales ⏰ Tiempo: N/A</div>
+                <div class="subtitle">Asegurarse de que todos los materiales necesarios para la clase estén disponibles y preparados antes de que lleguen los niños.</div>
+            </div>
+            <div id="revision_materiales" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (N/A):</strong> Asegúrate de tener listos todos los materiales indicados en la Diapositiva 1 antes de iniciar la misión.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> N/A</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 1 -->
+        <div id="activity-1" class="activity">
+            <div class="banner" onclick="toggleContent('bienvenida')">
+                <div class="title">🎉 Actividad 1: Bienvenida e Introducción al Día ⏰ Tiempo: 1 minuto</div>
+                <div class="subtitle">Dar la bienvenida a los niños, presentar el enfoque del día, y preparar sus mentes para la actividad.</div>
+            </div>
+            <div id="bienvenida" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (0.5 minutos):</strong> Reproduce la Diapositiva 2 "Bienvenida" y saluda a los niños mientras muestras el logo de Gnius Club, luego introduce el tema del día y la necesidad de entrenar el cerebro para la misión.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Hola, pequeños genios! Bienvenidos a nuestra mágica aventura en el Castillo Oscuro del Dragón. Hoy, ayudaremos a nuestro amigo Dargo a navegar por su hogar en la oscuridad. ¿Están listos para encender la luz de la creatividad y el ingenio?</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (0.5 minutos):</strong> Reproduce la Diapositiva 3 que tiene que mostrar el CODE SQUAD en un gimnasio cerebral y explica la importancia de ejercitar la mente para resolver problemas de abstracción.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Ahora que conocemos nuestro destino, vamos a calentar nuestros cerebros. Pongan atención a la letra de la canción y sigan sus instrucciones para activar esas habilidades del CODE SQUAD.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 2 -->
+        <div id="activity-2" class="activity">
+            <div class="banner" onclick="toggleContent('baile_estimulación')">
+                <div class="title">💃 Actividad 2: Baile de Estimulación ⏰ Tiempo: 2 minutos</div>
+                <div class="subtitle">Preparar a los niños para la misión con un ejercicio de secuenciación a través de un baile.</div>
+            </div>
+            <div id="baile_estimulación" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (2 minutos):</strong> Reproduce la DIAPOSITIVA 4 "¡Baila con las frutas!" y guía a los niños para que sigan las instrucciones de la canción. Toma un bloque de color rojo, otro amarillo, otro azul y uno verde. Simulen las frutas y la acción con esos bloques.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Perfecto! Ahora, vamos a mover nuestros cuerpos al ritmo de nuestra canción. Sigan las luces y los colores, y recuerden, cada paso nos acerca más a nuestro objetivo. ¡A bailar!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 3 -->
+        <div id="activity-3" class="activity">
+            <div class="banner" onclick="toggleContent('planteamiento_problema')">
+                <div class="title">🛠️ Actividad 3: Planteamiento del Problema ⏰ Tiempo: 2 minutos</div>
+                <div class="subtitle">Introducir a los niños en el contexto de la misión con el cuento.</div>
+            </div>
+            <div id="planteamiento_problema" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (1 minuto):</strong> Reproduce la Diapositiva 5 "El Castillo de Dargo" y narra la historia de cómo Dargo el dragón se enfrenta a la oscuridad en su castillo, utilizando un tono emocionante y detalles vívidos.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Hola integrantes del CODE SQUAD! Hoy vamos a sumergirnos en una aventura emocionante en el Castillo Oscuro. Imaginen un enorme castillo en el corazón de un bosque encantado, donde nuestro amigo Dargo, un joven dragón amable y curioso, vive. Esta noche, un repentino apagón ha dejado todo el castillo en la oscuridad. Con solo la luz de la luna, los pasillos y las torres que Dargo amaba explorar ahora están llenos de sombras misteriosas. ¿Pueden sentir el misterio en el aire? Hoy, con nuestras mentes listas y corazones valientes, ayudaremos a Dargo a encontrar su camino y restaurar la luz. ¡Prepárense para una noche de misterio y magia!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (1 minuto):</strong> Reproduce la Diapositiva 6 "El Generador Descompuesto" y explica el reto de usar antorchas de colores para guiar a Dargo al generador en el castillo oscuro.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Ahora que conocemos el escenario, enfrentamos un desafío emocionante. Dargo está un poco asustado porque nunca ha visto su castillo tan oscuro y necesita nuestra ayuda para encontrar el generador en el sótano y encender las luces. Pero no será fácil, ya que la oscuridad ha cambiado todo y los caminos familiares ahora son como laberintos desconocidos. Aquí es donde entramos nosotros, el CODE SQUAD, con nuestras antorchas de colores. Cada color le indicará a Dargo hacia dónde ir: rojo para girar a la izquierda, azul para la derecha, verde para regresar, amarillo para subir y violeta para bajar. ¡Es hora de ser valientes y creativos, pequeños genios! ¿Están listos para iluminar el camino y ayudar a Dargo a superar este desafío?</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 4 -->
+        <div id="activity-4" class="activity">
+            <div class="banner" onclick="toggleContent('formacion_parejas')">
+                <div class="title">🤝 Actividad 4: Formación de Parejas ⏰ Tiempo: 2.5 minutos</div>
+                <div class="subtitle">Formar equipos de trabajo y preparar a los estudiantes para la misión.</div>
+            </div>
+            <div id="formacion_parejas" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (2 minutos):</strong> Reproduce la diapositiva 7 'Formación de Equipos', explica la importancia de trabajar en equipo y junta a los niños en pares para trabajar en la misión.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> Para ayudar a Dargo primero tenemos que organizarnos en parejas. Recuerden que "Un grano no llena el granero, pero ayuda a su compañero." Así que vamos a formar equipos de dos. Busquen a alguien con quien crean que pueden hacer un gran equipo y júntense ahora. Recuerden, trabajando en equipo, ¡todo es posible!</td>
+                    </tr>
+                    <tr>
+                        <td><strong>PASO 2 (0.5 minutos):</strong> Reproduce la Diapositiva 8 "Code Squad Listo" y verifica que todos los niños estén emparejados y organizados para trabajar.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Muy bien, CODE SQUAD! ¿Todos tienen a su compañero? Es importante que todos tengan a alguien con quien trabajar. Si alguien no tiene pareja, levante la mano y juntos encontraremos la mejor solución. ¡Queremos que todos participen y se diviertan!</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 5 -->
+        <div id="activity-5" class="activity">
+            <div class="banner" onclick="toggleContent('explicacion_reto')">
+                <div class="title">⚙️ Actividad 5: Explicación del Reto de Codificación ⏰ Tiempo: <span id="activity-5-total-time">Variable según el nivel</span></div>
+                <div class="subtitle">Explicar el reto de codificación que deberán resolver.</div>
+            </div>
+            <div id="explicacion_reto" class="content">
+                <table id="activity-5-content">
+                    <!-- Contenido insertado dinámicamente -->
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 6 -->
+        <div id="activity-6" class="activity">
+            <div class="banner" onclick="toggleContent('construccion_bloques')">
+                <div class="title">🔧 Actividad 6: Construcción con Bloques ⏰ Tiempo: <span id="activity-6-total-time">Variable según el nivel</span></div>
+                <div class="subtitle">Ensamblar robots utilizando los bloques y los códigos generados.</div>
+            </div>
+            <div id="construccion_bloques" class="content">
+                <table id="activity-6-content">
+                    <!-- Contenido insertado dinámicamente -->
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 7 -->
+        <div id="activity-7" class="activity">
+            <div class="banner" onclick="toggleContent('obstaculo_historia')">
+                <div class="title">⚠️ Actividad 7: Mensaje del Cuartel ⏰ Tiempo: <span id="activity-7-total-time">Variable según el nivel</span></div>
+                <div class="subtitle">Introducir un obstáculo en la narrativa para mantener el interés y la motivación.</div>
+            </div>
+            <div id="obstaculo_historia" class="content">
+                <table id="activity-7-content">
+                    <!-- Contenido insertado dinámicamente -->
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 8 -->
+        <div id="activity-8" class="activity">
+            <div class="banner" onclick="toggleContent('conclusion_historia')">
+                <div class="title">🎉 Actividad 8: Conclusión de la Historia y Reflexión ⏰ Tiempo: 5 minutos</div>
+                <div class="subtitle">Cerrar la historia y hacer preguntas reflexivas.</div>
+            </div>
+            <div id="conclusion_historia" class="content">
+                <table>
+                    <tr>
+                        <td><strong>PASO 1 (5 minutos):</strong> Reproduce la diapositiva 24 "Conclusión y Cierre", felicita a los niños y cuenta el desenlace de la historia. Haz las preguntas y modera las respuestas de los genios siempre construyendo.</td>
+                        <td><strong>DIÁLOGO SUGERIDO:</strong> ¡Lo logramos, CODE SQUAD! Gracias a su increíble trabajo en equipo y seguir el código, Dargo ha logrado reparar el generador usando las antorchas correctas. ¿Qué aprendimos hoy? ¿Cómo ayudaron las antorchas a Dargo? ¿Por qué es importante seguir las instrucciones?</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+
+        function updateContent() {
+            var time = document.getElementById("class-time").value;
+            var level = document.getElementById("class-level").value;
+            document.getElementById("selected-time").innerText = "Tiempo efectivo de clase: " + time + " minutos";
+            document.getElementById("selected-level").innerText = "Nivel: " + level;
+
+            // Lógica para mostrar los pasos y ajustar los tiempos según nivel y tiempo seleccionados
+            var activity5Content = document.getElementById("activity-5-content");
+            var activity6Content = document.getElementById("activity-6-content");
+            var activity7Content = document.getElementById("activity-7-content");
+
+            var steps = {
+                "K1": {
+                    "5.1": [
+                          { "step": 1, "time": { "30": 1, "40": 1, "50": 1 }, "accion": "Reproduce la Diapositiva 9 y explica cómo codificar las antorchas para dar indicaciones a Dargo.", "dialogo": "¡CODE SQUAD! Para que Dargo pueda llegar al Generador en el sótano, vamos a crear un código para que Dargo entienda lo que tiene que hacer cuando vea las antorchas. Así como el ejemplo vamos a utilizar un bloque para representar lo que tiene que hacer Dargo. En mi ejemplo, cuando Dargo vea un bloque verde va a avanzar a la derecha. Ustedes pueden poner el bloque del color que quieran." },
+                          { "step": 2, "time": { "30": 2, "40": 2, "50": 2 }, "accion": "Reproduce la Diapositiva 10 y distribuye el papel y los materiales para que los niños trabajen en parejas.", "dialogo": "Aquí tienen los materiales para nuestro código. Vamos a asegurarnos de tener todo lo que necesitamos para que Dargo pueda llegar al sótano." },
+                          { "step": 3, "time": { "30": 5, "40": 7, "50": 10 }, "accion": "Reproduce la Diapositiva 11 y supervisa el proceso de creación del código en pares.", "dialogo": "Ahora, vamos a crear nuestro mapa. Recuerden que cada bloque representa una antorcha, y esa antorcha le dice a Dargo hacia dónde ir." }
+                         ],
+                    "6": [
+                          { "step": 1, "time": { "30": 2, "40": 2, "50": 2 }, "accion": "Reproduce la Diapositiva 18 'Recoger Códigos' y dirige a los Genios para que intercambien los códigos que hicieron.", "dialogo": "¡Atención, CODE SQUAD! Vamos a intercambiar los códigos que cada uno ha creado. Recogeré los códigos, los mezclaré y luego los distribuiré para que todos podamos ayudar a resolver el problema juntos." },
+                          { "step": 2, "time": { "30": 7, "40": 10, "50": 10 }, "accion": "Reproduce la Diapositiva 19 'Codificar Mapa K1' y entrega los códigos a los niños para que comiencen a construir según las instrucciones de los códigos.", "dialogo": "¡Ahora, CODE SQUAD, con los códigos en mano, es hora de construir! Cada equipo tiene un conjunto de instrucciones único. Vamos a ver cómo cada bloque es una señal para ayudar a Dargo a encontrar su camino en el castillo." }
+                         ],
+                    "7": [
+                          { "step": 1, "time": { "30": 0, "40": 2, "50": 2 }, "accion": "Reproduce la Diapositiva 22 y explica el obstáculo encontrado en la historia.", "dialogo": "¡Atención, CODE SQUAD! Mientras Dargo avanzaba por el castillo oscuro, usando las antorchas de colores que le indicaban el camino, ¡un hechizo del mago hizo que las paredes se movieran de posición! El camino ahora cambió, y Dargo necesita nuestra ayuda para no perderse." },
+                          { "step": 2, "time": { "30": 0, "40": 7, "50": 10 }, "accion": "Proyecta el nuevo mapa y guíalos para que vuelvan a crear sus antorchas para iluminar el camino de Dargo.", "dialogo": "¡Manos a la obra, CODE SQUAD! Vamos a usar estos bloques grandes para construir el camino correcto para Dargo. ¡Sigan el nuevo código con cuidado!" }
+                         ]
+                },
+                "K2": {
+                    "5.2": [
+                          { "step": 1, "time": { "30": 1, "40": 1, "50": 1 }, "accion": "Reproduce la Diapositiva 12 y explica cómo codificar las antorchas para dar indicaciones a Dargo.", "dialogo": "¡CODE SQUAD! Para que Dargo pueda llegar al Generador en el sótano, vamos a crear un código para que Dargo entienda lo que tiene que hacer cuando vea las antorchas. Así como el ejemplo vamos a utilizar dos bloques para representar lo que tiene que hacer Dargo. En mi ejemplo, cuando Dargo vea un bloque verde y uno rojo va a avanzar a la derecha. Ustedes pueden poner el bloque del color que quieran." },
+                          { "step": 2, "time": { "30": 2, "40": 2, "50": 2 }, "accion": "Reproduce la Diapositiva 13 y distribuye el papel y los materiales para que los niños trabajen en parejas.", "dialogo": "Aquí tienen sus materiales. Este mapa será un poco más complicado, así que pongan mucha atención." },
+                          { "step": 3, "time": { "30": 5, "40": 7, "50": 10 }, "accion": "Reproduce la Diapositiva 14 y supervisa el proceso de creación del código en pares.", "dialogo": "Ahora, vamos a crear nuestro mapa. Recuerden que dos bloques representan una antorcha, y esa antorcha le dice a Dargo hacia dónde ir." }
+                         ],
+                    "6": [
+                          { "step": 1, "time": { "30": 2, "40": 2, "50": 2 }, "accion": "Reproduce la Diapositiva 18 'Recoger Códigos' y dirige a los Genios para que intercambien los códigos que hicieron.", "dialogo": "¡Atención, CODE SQUAD! Vamos a intercambiar los códigos que cada uno ha creado. Recogeré los códigos, los mezclaré y luego los distribuiré para que todos podamos ayudar a resolver el problema juntos." },
+                          { "step": 2, "time": { "30": 7, "40": 10, "50": 10 }, "accion": "Reproduce la Diapositiva 20 'Codificar Mapa K2' y entrega los códigos a los niños para que comiencen a construir según las instrucciones de los códigos.", "dialogo": "¡Ahora, CODE SQUAD, con los códigos en mano, es hora de construir! Cada equipo tiene un conjunto de instrucciones único. Vamos a ver cómo cada bloque es una señal para ayudar a Dargo a encontrar su camino en el castillo." }
+                         ],
+                    "7": [
+                          { "step": 1, "time": { "30": 0, "40": 2, "50": 2 }, "accion": "Reproduce la Diapositiva 22 y explica el obstáculo encontrado en la historia.", "dialogo": "¡Atención, CODE SQUAD! Mientras Dargo avanzaba por el castillo oscuro, usando las antorchas de colores que le indicaban el camino, ¡un hechizo del mago hizo que las paredes se movieran de posición! El camino ahora cambió, y Dargo necesita nuestra ayuda para no perderse." },
+                          { "step": 2, "time": { "30": 0, "40": 7, "50": 10 }, "accion": "Proyecta el nuevo mapa y guíalos para que vuelvan a crear sus antorchas para iluminar el camino de Dargo.", "dialogo": "¡Manos a la obra, CODE SQUAD! Vamos a usar estos bloques grandes para construir el camino correcto para Dargo. ¡Sigan el nuevo código con cuidado!" }
+                         ]
+                },
+                "K3": {
+                    "5.3": [
+                          { "step": 1, "time": { "30": 1, "40": 1, "50": 1 }, "accion": "Reproduce la Diapositiva 15 y explica cómo codificar las antorchas para dar indicaciones a Dargo.", "dialogo": "¡CODE SQUAD! Para que Dargo pueda llegar al Generador en el sótano, vamos a crear un código para que Dargo entienda lo que tiene que hacer cuando vea las antorchas. Así como el ejemplo vamos a utilizar dos bloques para representar lo que tiene que hacer Dargo. En mi ejemplo, cuando Dargo vea un bloque verde y uno rojo va a avanzar a la derecha. Ustedes pueden poner el bloque del color que quieran." },
+                          { "step": 2, "time": { "30": 2, "40": 2, "50": 2 }, "accion": "Reproduce la Diapositiva 16 y distribuye el papel y los materiales para que los niños trabajen en parejas.", "dialogo": "Aquí tienen los materiales. Este es el mapa más difícil, pero sé que pueden hacerlo. Vamos a comenzar." },
+                          { "step": 3, "time": { "30": 5, "40": 7, "50": 10 }, "accion": "Reproduce la Diapositiva 17 y supervisa el proceso de creación del código en pares.", "dialogo": "Ahora, vamos a crear nuestro mapa. Recuerden que dos bloques representan una antorcha, y esa antorcha le dice a Dargo hacia dónde ir." }
+                         ],
+                    "6": [
+                          { "step": 1, "time": { "30": 2, "40": 2, "50": 2 }, "accion": "Reproduce la Diapositiva 18 'Recoger Códigos' y dirige a los Genios para que intercambien los códigos que hicieron.", "dialogo": "¡Atención, CODE SQUAD! Vamos a intercambiar los códigos que cada uno ha creado. Recogeré los códigos, los mezclaré y luego los distribuiré para que todos podamos ayudar a resolver el problema juntos." },
+                          { "step": 2, "time": { "30": 7, "40": 10, "50": 10 }, "accion": "Reproduce la Diapositiva 21 'Codificar Mapa K3' y entrega los códigos a los niños para que comiencen a construir según las instrucciones de los códigos.", "dialogo": "¡Ahora, CODE SQUAD, con los códigos en mano, es hora de construir! Cada equipo tiene un conjunto de instrucciones único. Vamos a ver cómo cada bloque es una señal para ayudar a Dargo a encontrar su camino en el castillo." }
+                         ],
+                    "7": [
+                          { "step": 1, "time": { "30": 0, "40": 2, "50": 2 }, "accion": "Reproduce la Diapositiva 22 y explica el obstáculo encontrado en la historia.", "dialogo": "¡Atención, CODE SQUAD! Mientras Dargo avanzaba por el castillo oscuro, usando las antorchas de colores que le indicaban el camino, ¡un hechizo del mago hizo que las paredes se movieran de posición! El camino ahora cambió, y Dargo necesita nuestra ayuda para no perderse." },
+                          { "step": 2, "time": { "30": 0, "40": 7, "50": 10 }, "accion": "Proyecta el nuevo mapa y guíalos para que vuelvan a crear sus antorchas para iluminar el camino de Dargo.", "dialogo": "¡Manos a la obra, CODE SQUAD! Vamos a usar estos bloques grandes para construir el camino correcto para Dargo. ¡Sigan el nuevo código con cuidado!" }
+                         ]
+                }
+            };
+
+            // Filtrar actividades y pasos que tengan tiempo 0 para el nivel y tiempo seleccionados
+            var activities = {
+                "activity-0": true, // Siempre mostrar
+                "activity-1": true, // Siempre mostrar
+                "activity-2": true, // Siempre mostrar
+                "activity-3": true, // Siempre mostrar
+                "activity-4": true, // Siempre mostrar
+                "activity-5": true, // Siempre mostrar
+                "activity-6": true, // Siempre mostrar
+                "activity-7": steps[level]["7"].some(s => s.time[time] > 0), // Mostrar si algún paso tiene tiempo > 0
+                "activity-8": true // Siempre mostrar
+            };
+
+            // Mostrar u ocultar actividades según corresponda
+            Object.keys(activities).forEach(function(activityId) {
+                var activityElement = document.getElementById(activityId);
+                if (activities[activityId]) {
+                    activityElement.style.display = "block";
+                } else {
+                    activityElement.style.display = "none";
+                }
+            });
+
+            // Renderizar contenido para actividad 5
+            renderActivitySteps(activity5Content, steps[level]["5." + (level === "K1" ? 1 : level === "K2" ? 2 : 3)], time);
+            // Renderizar contenido para actividad 6
+            renderActivitySteps(activity6Content, steps[level]["6"], time);
+            // Renderizar contenido para actividad 7
+            renderActivitySteps(activity7Content, steps[level]["7"], time);
+
+            // Calcular y mostrar tiempo total para actividades 5, 6 y 7
+            document.getElementById("activity-5-total-time").innerText = calculateTotalTime(steps[level]["5." + (level === "K1" ? 1 : level === "K2" ? 2 : 3)], time) + " minutos";
+            document.getElementById("activity-6-total-time").innerText = calculateTotalTime(steps[level]["6"], time) + " minutos";
+            document.getElementById("activity-7-total-time").innerText = calculateTotalTime(steps[level]["7"], time) + " minutos";
+        }
+
+        function renderActivitySteps(contentContainer, steps, time) {
+            contentContainer.innerHTML = "";  // Limpiar contenido anterior
+            steps.forEach(function(step) {
+                if (step.time[time] > 0) { // Solo mostrar pasos con tiempo > 0
+                    var row = document.createElement("tr");
+                    var stepCell = document.createElement("td");
+                    var actionCell = document.createElement("td");
+                    var dialogCell = document.createElement("td");
+
+                    stepCell.innerHTML = "<strong>PASO " + step.step + " (" + step.time[time] + " minutos):</strong>";
+                    actionCell.innerHTML = "<strong>ACCIÓN:</strong> " + step.accion;
+                    dialogCell.innerHTML = "<strong>DIÁLOGO SUGERIDO:</strong> " + step.dialogo;
+
+                    row.appendChild(stepCell);
+                    row.appendChild(actionCell);
+                    row.appendChild(dialogCell);
+                    contentContainer.appendChild(row);
+                }
+            });
+        }
+
+        function calculateTotalTime(steps, time) {
+            return steps.reduce((total, step) => total + step.time[time], 0);
+        }
+
+        // Inicializar el contenido según las selecciones por defecto
+        updateContent();
+    </script>
+</body>
+</html>
